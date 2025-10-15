@@ -18,87 +18,87 @@ app.listen(PORT, () => {
 
 //Books json
 const books = [
-    {
-      "id": 1,
-      "isActive": true,
-      "picture": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400",
-      "datePublish": "2023-05-15",
-      "nameBook": "El Jardín de los Secretos",
-      "gender": "Misterio"
-    },
-    {
-      "id": 2,
-      "isActive": false,
-      "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
-      "datePublish": "2022-11-08",
-      "nameBook": "Cumbres Borrascosas",
-      "gender": "Romance"
-    },
-    {
-      "id": 3,
-      "isActive": true,
-      "picture": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400",
-      "datePublish": "2024-01-20",
-      "nameBook": "El Código Da Vinci",
-      "gender": "Thriller"
-    },
-    {
-      "id": 4,
-      "isActive": false,
-      "picture": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400",
-      "datePublish": "2021-09-12",
-      "nameBook": "Cien Años de Soledad",
-      "gender": "Realismo Mágico"
-    },
-    {
-      "id": 5,
-      "isActive": true,
-      "picture": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400",
-      "datePublish": "2023-08-03",
-      "nameBook": "Dune",
-      "gender": "Ciencia Ficción"
-    },
-    {
-      "id": 6,
-      "isActive": false,
-      "picture": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400",
-      "datePublish": "2022-03-25",
-      "nameBook": "Orgullo y Prejuicio",
-      "gender": "Romance"
-    },
-    {
-      "id": 7,
-      "isActive": true,
-      "picture": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400",
-      "datePublish": "2024-02-14",
-      "nameBook": "El Hobbit",
-      "gender": "Fantasía"
-    },
-    {
-      "id": 8,
-      "isActive": false,
-      "picture": "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400",
-      "datePublish": "2021-12-30",
-      "nameBook": "1984",
-      "gender": "Distopía"
-    },
-    {
-      "id": 9,
-      "isActive": true,
-      "picture": "https://images.unsplash.com/photo-1554757380-2fb69b9d5e63?w=400",
-      "datePublish": "2023-11-05",
-      "nameBook": "Harry Potter y la Piedra Filosofal",
-      "gender": "Fantasía"
-    },
-    {
-      "id": 10,
-      "isActive": false,
-      "picture": "https://images.unsplash.com/photo-1568667256597-3fa4e132d903?w=400",
-      "datePublish": "2022-07-18",
-      "nameBook": "Crónica de una Muerte Anunciada",
-      "gender": "Drama"
-    }
-  ]
+  {
+    "id": 1,
+    "isActive": true,
+    "picture": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-_qFlRxa5Ozof4LnQb6m3QZYNCh4JRxa2Xc0cCMwVn_3Sdyry",
+    "datePublish": "1967-05-30",
+    "nameBook": "Cien años de soledad",
+    "gender": "Realismo Mágico"
+  },
+  {
+    "id": 2,
+    "isActive": false,
+    "picture": "https://m.media-amazon.com/images/I/81Xv0BmZxTL._UF894,1000_QL80_.jpg",
+    "datePublish": "1949-06-08",
+    "nameBook": "1984",
+    "gender": "Distopía"
+  },
+  {
+    "id": 3,
+    "isActive": true,
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYTBOO3kFvdLHBaLYxMV3Wt8EqcFOsPF2mSA&s",
+    "datePublish": "2007-04-12",
+    "nameBook": "El nombre del viento",
+    "gender": "Fantasía Épica"
+  },
+  {
+    "id": 4,
+    "isActive": true,
+    "picture": "https://internacionallibrosyregalos.com/cdn/shop/products/ORGULLOYPREJUICIO_d8838bbb-a901-4956-aaee-dac18ff2bc4f_341x.jpg?v=1641419436",
+    "datePublish": "1813-01-28",
+    "nameBook": "Orgullo y prejuicio",
+    "gender": "Novela Romántica"
+  },
+  {
+    "id": 5,
+    "isActive": false,
+    "picture": "https://internacionallibrosyregalos.com/cdn/shop/products/PRINCIPITO_391x.jpg?v=1631134820",
+    "datePublish": "1943-04-06",
+    "nameBook": "El principito",
+    "gender": "Fábula Filosófica"
+  },
+  {
+    "id": 6,
+    "isActive": true,
+    "picture": "https://m.media-amazon.com/images/I/61hSJClsHAS._UF1000,1000_QL80_.jpg",
+    "datePublish": "1965-08-01",
+    "nameBook": "Dune",
+    "gender": "Ciencia Ficción"
+  },
+  {
+    "id": 7,
+    "isActive": false,
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+    "datePublish": "1960-07-11",
+    "nameBook": "Matar un ruiseñor",
+    "gender": "Ficción Literaria"
+  },
+  {
+    "id": 8,
+    "isActive": true,
+    "picture": "https://m.media-amazon.com/images/I/81+j6JIEweL.jpg",
+    "datePublish": "2011-10-14",
+    "nameBook": "Donde los árboles cantan",
+    "gender": "Fantasía Juvenil"
+  },
+  {
+    "id": 9,
+    "isActive": false,
+    "picture": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653311117i/6691227.jpg",
+    "datePublish": "1979-10-12",
+    "nameBook": "Guía del autoestopista galáctico",
+    "gender": "Ciencia Ficción Cómica"
+  },
+  {
+    "id": 10,
+    "isActive": false,
+    "picture": "https://internacionallibrosyregalos.com/cdn/shop/products/cronicadeunamuerteanunciada_238x.jpg?v=1586217660",
+    "datePublish": "1981-03-24",
+    "nameBook": "Crónica de una muerte anunciada",
+    "gender": "Novela Corta"
+  }
+]
   ;
 
 //---------------------------------- Endpoints---------------------------------------

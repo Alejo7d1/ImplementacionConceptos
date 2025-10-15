@@ -1,6 +1,6 @@
 body {
-  background-color: #1e1b18; /* tono oscuro cálido */
-  color: #f0e6db; /* tono claro cálido */
+  background-color: #1a1a1a; 
+  color: #f0e6db; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
@@ -8,12 +8,12 @@ body {
 
 h1 {
   text-align: center;
-  color: #ffb347; /* título cálido */
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
 button {
-  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  background: #ffb347;
   color: #1e1b18;
   border: none;
   padding: 8px 15px;
@@ -55,7 +55,7 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-/* Contenedor de libros */
+
 #resultsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -63,9 +63,8 @@ input[type="text"] {
   margin-top: 20px;
 }
 
-/* Card individual */
 .book {
-  background-color: #2c2620;
+  background-color: #252525;
   border-radius: 12px;
   padding: 15px;
   display: flex;

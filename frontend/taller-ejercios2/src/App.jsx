@@ -47,15 +47,17 @@ function BookApp() {
       return;
     }
 
-    const books = Array.isArray(result.data) ? result.data : [result.data];
+    const booksData = Array.isArray(result.data) ? result.data : [result.data];
     
-    if (books.length === 0) {
+    if (booksData.length === 0) {
       container.innerHTML = '<p class="error">No se encontraron libros</p>';
       return;
     }
+    
+    setBooks(booksData);
 
     container.innerHTML = `
-        ${books.map(book => `
+        ${booksData.map(book => `
             <div class="book">
                 <img src="${book.picture}" width="100">
                 <h3>${book.nameBook}</h3>
@@ -77,9 +79,6 @@ function BookApp() {
   return (
     <div>
       <div>
-        <button onClick={getAllData}>Todos los Libros</button>
-        <button onClick={() => getByQuery(true)}>Libros Activos</button>
-        <button onClick={() => getByQuery(false)}>Libros Inactivos</button>
         <br />
         <input 
           type="number" 
@@ -100,6 +99,9 @@ function BookApp() {
         <button onClick={() => getByGender(true)}>Activos + Género</button>
         <button onClick={() => getByGender(false)}>Inactivos + Género</button>
       </div>
+      <button onClick={getAllData}>Todos los Libros</button>
+      <button onClick={() => getByQuery(true)}>Libros Activos</button>
+      <button onClick={() => getByQuery(false)}>Libros Inactivos</button>
       <div id="results">
         <h2>Resultados:</h2>
         <p className="success">Encontrados: {books.length} libros</p>
