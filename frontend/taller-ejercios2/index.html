@@ -2,29 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="./src/assets/icon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>taller-ejercios2</title>
+    <title>Taller 2</title>
   </head>
   <body>
-    <div>
-        <button onclick="getAllData()">Todos los Libros</button>
-        <button onclick="getByQuery(true)">Libros Activos</button>
-        <button onclick="getByQuery(false)">Libros Inactivos</button>
-        <br>
-        <input type="number" id="bookId" placeholder="ID del libro">
-        <button onclick="getById()">Buscar por ID</button>
-        <br>
-        <input type="text" id="gender" placeholder="Género (ej: Fantasía)">
-        <button onclick="getByGender(true)">Activos + Género</button>
-        <button onclick="getByGender(false)">Inactivos + Género</button>
-    </div>
-
-    <div id="results">
-        <h2>Resultados:</h2>
-        <div id="resultsContainer"></div>
-    </div>
-
-    <script src="app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
