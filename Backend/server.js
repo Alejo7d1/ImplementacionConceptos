@@ -2,6 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+app.use(cors({
+    origin: 'http://localhost:5173', // Puerto de Vite
+    credentials: true
+}));
+
 app.use(cors());
 app.use(express.json());
 
@@ -139,5 +144,91 @@ app.get('/dataInfo/s/:status', (req, res) => { //Se agrega s para no tener 2 end
     }
 });
 
+//dataQuery
+app.get('/dataQuery', (req, res) => {
+  const statusParam = req.query.status;
+  
+  
+  if (statusParam === undefined) {
+    return res.status(400).json({
+      status: false,
+      message: 'Parámetro "status" es requerido.',
+      dateTime: new Date().toISOString()
+    });
+  }
 
+  if (statusParam.toLowerCase() !== 'true' && statusParam.toLowerCase() !== 'false') {
+    return res.status(400).json({
+      status: false,
+      message: 'Valor inválido para "status".',
+      dateTime: new Date().toISOString()
+    });
+  }
 
+  const statusBoolean = statusParam.toLowerCase() === 'true';//bool convert
+  const filteredBooks = books.filter(b => b.isActive === statusBoolean);//filtrar libros
+  //filtro de libros
+  if (filteredBooks.length === 0) {
+    return res.status(404).json({
+      status: false,
+      message: 'No se encontraron libros con ese estado',
+      dateTime: new Date().toISOString()
+    });
+  }
+  res.json({
+    status: true,
+    data: filteredBooks,
+    dateTime: new Date().toISOString()
+  });
+}
+
+);
+
+//data info query
+app.get('/dataInfoQuery', (req, res) => {
+  const statusParam = req.query.status;
+  const genderParam = req.query.gender
+  
+  if (statusParam === undefined) {
+    return res.status(400).json({
+      status: false,
+      message: 'Parametro "status" es requerido.',
+      dateTime: new Date().toISOString()
+    });
+  }
+
+  if (genderParam === undefined) {
+    return res.status(400).json({
+      status: false,
+      message: 'Parametro "gender" es requerido.',
+      dateTime: new Date().toISOString()
+    });
+  }
+  
+  if (statusParam.toLowerCase() !== 'true' && statusParam.toLowerCase() !== 'false') {
+    return res.status(400).json({
+      status: false,
+      message: 'Valor inválido para "status".',
+      dateTime: new Date().toISOString()
+    });
+  }
+
+  const statusBoolean = statusParam.toLowerCase() === 'true';
+  const specificBooks = books.filter(b => b.isActive === statusBoolean && b.gender.toLowerCase() === genderParam.toLowerCase());
+
+  if (specificBooks.length === 0) {
+    return res.status(404).json({
+      status: false,
+      message: `No se encontraron libros con status=${statusParam} y genero="${genderParam}"`,
+      dateTime: new Date().toISOString()
+    });
+  }
+
+  
+  res.json({
+    status: true,
+    data: specificBooks,
+    dateTime: new Date().toISOString()
+  });
+  
+});
